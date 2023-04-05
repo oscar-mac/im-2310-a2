@@ -1,80 +1,79 @@
-
 #box-1 {
-    display:inline-block;
-    position: absolute;
-    width: 396px;
-height: 259px;
-left: 437px;
-top: 26px;
-    border: 4px solid black;
+  display:inline-block;
+  position: absolute;
+  width: 396px;
+  height: 259px;
+  left: 437px;
+  top: 26px;
+  border: 4px solid black;
 }
 
 #box-2 {
-    display:inline-block;
-    position: absolute;
-    width: 224px;
-    height: 259px;
-    left: 850px;
-    top: 26px; 
-    border: 4px solid black;
+  display:inline-block;
+  position: absolute;
+  width: 224px;
+  height: 259px;
+  left: 850px;
+  top: 26px; 
+  border: 4px solid black;
 }
 
 #box-3 {
-    display:inline-block;
-    position: absolute;
-    width: 375px;
-height: 202px;
-left: 437px;
-top: 300px;
-    border: 4px solid black;
+  display:inline-block;
+  position: absolute;
+  width: 375px;
+  height: 202px;
+  left: 437px;
+  top: 300px;
+  border: 4px solid black;
 }
 
 #box-4 {
-display: inline-block;
-position: absolute;
-width: 241px;
-height: 322px;
-left: 833px;
-top: 300px;
-border: 4px solid black;
+  display: inline-block;
+  position: absolute;
+  width: 241px;
+  height: 322px;
+  left: 833px;
+  top: 300px;
+  border: 4px solid black;
 }
 
 #box-5 {
-    display: inline-block;
-    position: absolute;
-    width: 375px;
-height: 97px;
-left: 437px;
-top: 525px;
-    border: 4px solid black;
-    }
+  display: inline-block;
+  position: absolute;
+  width: 375px;
+  height: 97px;
+  left: 437px;
+  top: 525px;
+  border: 4px solid black;
+}
 
 #box-6 {
-    display: inline-block;
-    position: absolute;
-    width: 241px;
-height: 322px;
-left: 437px;
-top: 637px;
-    border: 4px solid black;
-    }
+  display: inline-block;
+  position: absolute;
+  width: 241px;
+  height: 322px;
+  left: 437px;
+  top: 637px;
+  border: 4px solid black;
+}
 
 #box-7 {
-    display: inline-block;
-    position: absolute;
-    width: 375px;
-height: 121px;
-left: 699px;
-top: 637px;
-    border: 4px solid black;
-    }
+  display: inline-block;
+  position: absolute;
+  width: 375px;
+  height: 121px;
+  left: 699px;
+  top: 637px;
+  border: 4px solid black;
+}
 #box-8 {
-    display: inline-block;
-    position: absolute;
-    width: 375px;
-height: 184px;
-left: 699px;
-top: 774px;
-border: 4px solid black;
+  display: inline-block;
+  position: absolute;
+  width: 375px;
+  height: 184px;
+  left: 699px;
+  top: 774px;
+  border: 4px solid black;
 }
 
