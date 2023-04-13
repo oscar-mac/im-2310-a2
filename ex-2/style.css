@@ -13,8 +13,7 @@
 :root{
   --col-01:white;
   --col-02:black;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
+  --col-03: #818589;
   --border: 1px solid var(--col-02);
 }
 
@@ -129,7 +128,8 @@ body{
 }
 
 .RecipeInfo_label {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: bold;
 
 }
 
@@ -138,8 +138,12 @@ body{
 }
 
 .RecipeInfo {
-  border: var(--border);
   box-sizing: border-box;
   flex-basis: 18%;
   margin-right: 27px;
+}
+
+.Publisher {
+  color: gray;
+  font-weight:400
 }
