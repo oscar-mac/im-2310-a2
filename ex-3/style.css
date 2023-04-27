@@ -1,0 +1,214 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-03-hover:#5252ffE6;
+  --col-03-select:#5252ff80;
+  --col-04:#b6e878;
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: 0.2s linear;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+  text-decoration: underline; /*UNDERLINE REFERENCES A LINK. PROVIDES TOUCH BASED INTERFACE WITH SIGNIFIER THAT FUNCTION AFFORDS INTERACTION*/
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+li a:hover{ /*PROVIDES CURSOR BASED INTERFACE WITH SIGNIFIER THAT FUNCTION AFFORDS INTERACTION. 
+  CURSOR SIGNIFIES USER TO "CLICK" AND CHANGE IN OPACITY INDICATES THAT ELEMENT IS SELECTED*/
+  font-size: 1rem;
+  cursor:pointer;
+  opacity: 0.9; 
+}
+
+li a:active{
+  font-size: 1rem;
+  cursor:pointer;
+  opacity: 0.5; /*FURTHER CHANGE IN OPACITY INDICATES THAT INTERACTION HAS BEEN PERFORMED*/
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  text-decoration: underline; /*UNDERLINE REFERENCES A LINK. PROVIDES TOUCH BASED INTERFACE WITH SIGNIFIER THAT FUNCTION AFFORDS INTERACTION*/
+
+}
+
+#mode-button:hover{ /*PROVIDES CURSOR BASED INTERFACE WITH SIGNIFIER THAT FUNCTION AFFORDS INTERACTION.
+  CURSOR SIGNIFIES USER TO "CLICK" AND CHANGE IN OPACITY INDICATES THAT ELEMENT IS SELECTED*/
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#mode-button:active{
+  cursor: pointer;
+  opacity: 0.5; /*FURTHER CHANGE IN OPACITY INDICATES THAT INTERACTION HAS BEEN PERFORMED*/
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+#load-link{
+  line-height: 1rem;
+  background-color: var(--col-03);
+  color: var(--col-02);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+#load-link:hover{
+  cursor:pointer;
+  background-color: var(--col-03-hover);
+}
+
+#load-link:active{
+  cursor:pointer;
+  background-color: var(--col-03-select);
+}
+/* SIMPLE LOADING ANIMATION (THROBBER) 
+INDICATING TO USER THAT FAKE LOADING PROCESS IS IN PROGRESS*/
+.load-throbber { 
+  display: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-top-color: var(--col-03);
+  animation: spin 1s ease infinite;
+  position: relative;
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+/* ACCESSIBILITY - IF USER HAS SYSTEM SETTINGS TO REDUCE MOTION, WEBPAGE WILL FOLLOW SETTING */
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
+
+/* KEYFRAME spin REFERENCED IN .load-throbber CLASS */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
