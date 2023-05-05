@@ -99,8 +99,8 @@
   background-image: url('./icons/mute.svg');
 }
 
-/* ICONS FOR SEEK REWIND/FORWARD SOURCED FROM 
-GOOGLE FONTS https://fonts.google.com/icons */
+/* CUSTOM ICONS INSTEAD OF SUPPLIED rewind.svg AND fastForward.svg SINCE IT INDICATES TO THE USER THE DURATION OF SEEK REWIND/FORWARD
+SOURCED FROM GOOGLE FONTS https://fonts.google.com/icons */
 
 #rewindButton{
   background-image: url('./icons/rewind-5.svg');
