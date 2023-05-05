@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
+
+  </head>
+
+  <body>
+
+    <!-- this element holds all of the media player -->
+    <div class="video-player-wrapper">
+      <!-- this element holds the video element and the overlay -->
+      <div class="video-element-wrapper">
+
+        <video id="videoElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        </video>
+
+        <img id="videoPlayOverlay" src="./icons/play.svg">
+
+        
+        <!-- this element holds all of the custom controls -->
+
+        <!-- NESTED video-controls-wrapper UNDER video-element-wrapper TO OVERLAY CONTROLS OVER video-element-wrapper TO 
+          IMPROVE USER PERCEIVED ASSOCIATION (LAW OF PROXIMITY) WITH video-element-wrapper (WERTHEIME, 1922)-->
+        <div class="video-controls-wrapper" id="controlsWrapper">
+        
+          <!-- SEEK REWIND 5S (ASSESS THIS FEATURE) -->
+          <!-- MAPPING: rewindButton AND forwardButton BUTTONS HAVE BEEN PLACED ON EITHER 
+            SIDE OF THE playButton BUTTON CORRESPONDING TO THE RELATIONSHIP WITH THEIR 
+            DIRECTIONAL MOVEMENT ON THE PROGRESS BAR FOR GREATER EASE OF USE E.G: rewindButton 
+            CORRESPONDS TO BACKWARDS MOVEMENT AND IS THEREFORE POSITIONED ON THE LEFT OF THE 
+            playButton BUTTON (NORMAN, 1990)-->
+          <button class="video-control-button" id="rewindButton"></button>
+  
+          <button class="video-control-button" id="playButton"></button>
+          
+          <!-- SEEK FORWARD 5S -->
+          <button class="video-control-button" id="forwardButton"></button>
+  
+          <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+  
+          <button class="video-control-button" id="muteButton"></button> 
+          <!-- MOVED muteButton TO RIGHT HAND SIDE OF progressBar TO SEGREGATE FUNCTION THROUGH LAW OF PROXIMITY
+            AND LAW OF COMMON REGION (WERTHEIMER, 1922). BUTTONS ON LEFT HAND SIDE CONTROL VIDEO PLAYBACK, 
+            BUTTONS ON RIGHT HAND SIDE CONTROL AUDIO PLAYBACK -->
+  
+          
+  
+        </div>
+
+        
+        
+
+      </div>
+      
+      
+
+    </div>
+
+  </body>
+
+</html>
